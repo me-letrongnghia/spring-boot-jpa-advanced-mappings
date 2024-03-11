@@ -32,7 +32,7 @@ public class CruddemoApplication {
 	}
 
 	private void deleteInstructorDetail(AppDAO appDAO) {
-		appDAO.deleteInstructorDetailById(3);
+		appDAO.deleteInstructorDetailById(5);
 		System.out.println("Done!");
 	}
 
