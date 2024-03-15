@@ -38,8 +38,40 @@ public class CruddemoApplication {
 
 			// findCoursesForInstructor(appDAO);
 
-			findInstructorWithCoursesJoinFetch(appDAO);
+			// findInstructorWithCoursesJoinFetch(appDAO);
+
+			// updateInstructor(appDAO);
+
+			// updateCourse(appDAO);
 		};
+	}
+
+	private void updateCourse(AppDAO appDAO) {
+
+		// find the courses
+		Course course = appDAO.findCoursesById(1);
+
+		// changes information course
+		course.setTitle("Khoa hoc lua ga nang cao");
+
+		// update course
+		appDAO.update(course);
+
+		System.out.println("Done!");
+	}
+
+	private void updateInstructor(AppDAO appDAO) {
+
+		// find the instructor
+		Instructor instructor = appDAO.findInstructorById(1);
+
+		// changes information the instructor
+		instructor.setLastName("Le Trong");
+
+		// update information
+		appDAO.update(instructor);
+
+		System.out.println("Done!");
 	}
 
 	private void findInstructorWithCoursesJoinFetch(AppDAO appDAO) {
