@@ -30,8 +30,18 @@ public class CruddemoApplication {
 
 			// deleteInstructorDetail(appDAO);
 
-			createInstructorWithCourse(appDAO);
+			// createInstructorWithCourse(appDAO);
+
+			findInstructorWithCourse(appDAO);
 		};
+	}
+
+	private void findInstructorWithCourse(AppDAO appDAO) {
+
+		Instructor instructor = appDAO.findInstructorById(1);
+		System.out.println(instructor);
+		System.out.println(instructor.getCourses());
+		System.out.println("Done!");
 	}
 
 	private void createInstructorWithCourse(AppDAO appDAO) {
